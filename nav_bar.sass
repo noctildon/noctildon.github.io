@@ -1,0 +1,43 @@
+body
+  margin: 0px
+  margin-top: 20px
+
+$nav_wid: 80px
+$nav_item_color: #00caca
+
+.nav
+  border: solid 1px
+  width: 100%
+  position: relative
+  height: $nav_wid
+  font-size: 30px
+  background-color: #8e8e8e
+
+.about,.physics,.tech,.nthu
+  cursor: pointer
+  border: solid 1px
+  border-top: solid 0px
+  border-bottom: solid 0px
+  width: 200px
+  height: 100%
+  left: 30px
+  display: inline-block  // line in the same line
+  position: relative
+  // 字置中
+  text-align: center
+  line-height: $nav_wid
+  background-color: #fff
+
+.about:hover
+  background-color: $nav_item_color
+
+.physics:hover
+  background-color: $nav_item_color
+
+.tech:hover
+  background-color: $nav_item_color
+
+.nthu:hover
+  background-color: $nav_item_color
+
+

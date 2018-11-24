@@ -1,0 +1,44 @@
+body {
+  margin: 0px;
+  margin-top: 20px;
+}
+
+.nav {
+  border: solid 1px;
+  width: 100%;
+  position: relative;
+  height: 80px;
+  font-size: 30px;
+  background-color: #8e8e8e;
+}
+
+.about, .physics, .tech, .nthu {
+  cursor: pointer;
+  border: solid 1px;
+  border-top: solid 0px;
+  border-bottom: solid 0px;
+  width: 200px;
+  height: 100%;
+  left: 30px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  line-height: 80px;
+  background-color: #fff;
+}
+
+.about:hover {
+  background-color: #00caca;
+}
+
+.physics:hover {
+  background-color: #00caca;
+}
+
+.tech:hover {
+  background-color: #00caca;
+}
+
+.nthu:hover {
+  background-color: #00caca;
+}
