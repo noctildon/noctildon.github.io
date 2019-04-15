@@ -62,12 +62,13 @@ ul {
 }
 
 /* icon size in hover */
-img {
-  width: 400px;
-  height: 400px;
+.small-icon {
+  width: 100px;
+  height: 100px;
 }
 
 
-.jsmaps-tooltips{
-  background-color: red;
+.hover-icon {
+  width: 400px;
+  height: 400px;
 }

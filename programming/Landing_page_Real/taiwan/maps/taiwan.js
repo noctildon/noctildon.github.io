@@ -15,14 +15,14 @@ var default_setting = {
 }
 
 
-// <img class='icon' src="icon/icon00${number}.png">
+// <h1>${city}</h1><br /> <img class='icon' src="icon/icon00${number}.png">
 function cityDescription(city, number) {
-  return `<h1>${city}</h1><br /> `
+  return `<img class='small-icon' src="icon/icon00${number}.png">`
 }
 
 function hoverCity(city, number) {
   // number start from 1 to 7
-  return `${city} <img src="icon/icon00${number}.png">`
+  return `${city} <img class='hover-icon' src="icon/icon00${number}.png">`
 
 }
 
