@@ -36,7 +36,8 @@
   position: fixed;
   display: none;
   padding: 10px 15px;
-  background: #f2f2f2;
+  /* background: #f2f2f2; */
+  background-color: #f2f2f234;
   font-size: 14px;
   font-weight: bold;
   border: 1px solid #262626;

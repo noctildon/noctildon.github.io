@@ -15,8 +15,9 @@ var default_setting = {
 }
 
 
+// <img class='icon' src="icon/icon00${number}.png">
 function cityDescription(city, number) {
-  return `<h1>${city}</h1><br /> <img class='icon' src="icon/icon00${number}.png">`
+  return `<h1>${city}</h1><br /> `
 }
 
 function hoverCity(city, number) {
@@ -25,6 +26,8 @@ function hoverCity(city, number) {
 
 }
 
+const Taiwan_description = "<p>Taiwan is a small island nation 180km east of China with modern cities, traditional Chinese temples, hot springs resorts and dramatic mountainous terrain. Taipei, the country’s capital in the north, is known for its busy night markets, Chinese Imperial art at the National Palace Museum and Taipei 101, a 509m-tall, bamboo-shaped skyscraper with an observation deck.</p>"
+
 window.JSMaps.maps.taiwan = {
   "config": {
     "mapWidth": 373.888,
@@ -32,7 +35,7 @@ window.JSMaps.maps.taiwan = {
     'textAreaWidth': 500,
     "displayAbbreviations": false,
     "defaultText": "",
-    "defaultText": "<h1>Taiwan</h1><br /><p>Taiwan is a small island nation 180km east of China with modern cities, traditional Chinese temples, hot springs resorts and dramatic mountainous terrain. Taipei, the country’s capital in the north, is known for its busy night markets, Chinese Imperial art at the National Palace Museum and Taipei 101, a 509m-tall, bamboo-shaped skyscraper with an observation deck.</p>"
+    "defaultText": "<h1>Taiwan</h1><br />"
   },
   "paths": [{
       ...default_setting,
