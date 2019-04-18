@@ -14,14 +14,14 @@
     </script>
 
     <script>
-      (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date(); a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-      ga('create', 'UA-37178375-6', 'auto');
-      ga('send', 'pageview');
+      var trackOutboundLink = function (url) {
+            gtag('event', 'click', {
+                'event_category': 'outbound',
+                'event_label': url,
+                'transport_type': 'beacon',
+                'event_callback': function () { document.location = url; }
+            });
+        }
     </script>
 
     <meta charset="UTF-8">
@@ -72,7 +72,7 @@
                 <h2 class="lead banner-text">平凡的每一步都暗藏驚喜</h2>
                 <!-- Wake up on time, hear your friends. -->
                 <br>
-                <a id="hyperlinkHidden" class="buttonUp" href="https://docs.google.com/forms/d/e/1FAIpQLSfNYcJArdQirf2HfaOG09eI8__3cLx4Bw4tGahB1US5D27t_Q/viewform?usp=sf_link" onclick="ga('send', 'event', 'catalogue','click')"><i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;預先註冊&nbsp;</a>
+                <a id="hyperlinkHidden" class="buttonUp" onclick="trackOutboundLink('https://docs.google.com/forms/d/e/1FAIpQLSfNYcJArdQirf2HfaOG09eI8__3cLx4Bw4tGahB1US5D27t_Q/viewform?usp=sf_link'); return false;"><i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;預先註冊&nbsp;</a>
                 <!-- Get Notified When Available -->
             </div>
             <h2 class="banner-text">
@@ -172,7 +172,7 @@
                       在表單上留下email，除了在第一時間收到我們的通知，並能獲得額外的驚喜好禮!
                     </p>
                     <br>
-                    <a class="btn btn-success btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSfNYcJArdQirf2HfaOG09eI8__3cLx4Bw4tGahB1US5D27t_Q/viewform?usp=sf_link" onclick="ga('send', 'event', 'catalogue','click')"><i class="fa fa-thumbs-up" aria-hidden="true"></i>搶先註冊</a>
+                    <a class="btn btn-success btn-lg" onclick="trackOutboundLink('https://docs.google.com/forms/d/e/1FAIpQLSfNYcJArdQirf2HfaOG09eI8__3cLx4Bw4tGahB1US5D27t_Q/viewform?usp=sf_link'); return false;"><i class="fa fa-thumbs-up" aria-hidden="true"></i>搶先註冊</a>
                 </section>
             </div>
         </div>
