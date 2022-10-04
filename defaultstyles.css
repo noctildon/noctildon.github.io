@@ -42,12 +42,25 @@ body {
   padding-right: 0px;
   padding-bottom: 0px;
   padding-left: 0px;
-  background-color: #a0b6c0;
+  background-color: #b3b3b34b;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 0% 0%;
   color: #333333;
   height: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 15px;
+}
+
+th {
+  font-size: 22px;
+}
+
+td {
+  font-size: 18px;
 }
 
 #pub_title {
