@@ -63,6 +63,11 @@ for name, number in phonebook.items():
     print(f'Phone number of {name} is {number}')
 
 
+# list comprehension
+squares = [x**2 for x in range(10)]
+print(squares) # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+
 # while loop
 count = 0
 while count < 5:
