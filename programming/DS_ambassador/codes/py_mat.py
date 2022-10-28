@@ -1,3 +1,8 @@
+"""
+Matplotlib is a plotting library for Python. It is a very powerful tool for data visualization.
+pip install matplotlib
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 

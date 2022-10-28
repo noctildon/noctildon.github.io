@@ -8,6 +8,7 @@ You may need to install the packages: $pip3 install multiprocess filelock
 import multiprocess as mp
 from math import factorial
 from filelock import FileLock
+import time
 
 
 def job(x):
@@ -32,6 +33,30 @@ def multicore():
     pool.map(job, range(100000)) # calculate 0! to 99999!
 
 
+# memory sharing
+def job_ms(v, num, l):
+    l.acquire()
+    for _ in range(5):
+        time.sleep(0.1)
+        v.value += num # use .value to get the value
+        print(v.value)
+    l.release()
+
+
+def multicore_ms():
+    # i for int, d for float
+    # 2nd argu is the initial value
+    v = mp.Value('i', 0) # initialize share variable
+    l = mp.Lock() # initialize a lock
+
+    p1 = mp.Process(target=job, args=(v, 1, l)) # pass the lock in
+    p2 = mp.Process(target=job, args=(v, 3, l))
+    p1.start()
+    p2.start()
+    p1.join()
+    p2.join()
+
+
 if __name__ == "__main__":
     global lock, outputFile
 
@@ -39,3 +64,4 @@ if __name__ == "__main__":
     lock = FileLock(outputFile + '.lock')
 
     multicore()
+    # multicore_ms()

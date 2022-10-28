@@ -1,5 +1,6 @@
 """
 Scipy is a collection of packages for scientific computing in Python
+pip install scipy
 """
 
 from scipy import stats

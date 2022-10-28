@@ -2,6 +2,8 @@
 Numpy is a library for the python, adding support for large,
 multi-dimensional arrays and matrices, along with a large collection of high-level
 mathematical functions to operate on these arrays.
+
+pip install numpy
 """
 
 import numpy as np

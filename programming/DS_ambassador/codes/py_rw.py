@@ -1,6 +1,7 @@
 """
 Read and write files in python
 keywords: open, with, read, write, close
+w: write, r: read, a: append
 """
 
 
@@ -22,7 +23,7 @@ f.close()  # Close the file when done
 f = open("textfile.txt", "r")
 if f.mode == "r":
     # contents = f.read()
-    fl = f.readlines()
+    fl = f.readlines() # a list
     for x in fl:
         print(x)
 f.close()

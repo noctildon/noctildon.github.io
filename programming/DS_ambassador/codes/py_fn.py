@@ -10,7 +10,7 @@ def my_function():
     print("Hello from a function")
 
 # call function
-my_function()
+my_function() # "Hello from a function"
 
 # input arguments
 def my_function_with_args(username, greeting):
@@ -19,7 +19,7 @@ def my_function_with_args(username, greeting):
 my_function_with_args("John", "a great year!")
 
 
-# default arguments and return value
+# default value for arguments and return value
 def sum_two_numbers(a, b=10):
     return a + b
 
@@ -35,7 +35,7 @@ s, p = sum_and_product(5, 10)  # s is 15, p is 50
 
 # lambda function
 my_list = [1, 5, 4, 6, 8, 11, 3, 12]
-new_list = list(filter(lambda x: (x%2 == 0) , my_list))
+new_list = list(filter(lambda x: (x%2 == 0) , my_list)) # filter the even numbers
 print(new_list)  # [4, 6, 8, 12]
 
 
@@ -48,8 +48,8 @@ def sum_all_numbers(*args):
 
 print(sum_all_numbers(1, 2, 3, 4, 5))  # 15
 
-# variable number of keyword arguments
 
+# variable number of keyword arguments
 def print_all_key_values(**kwargs):
     for key, value in kwargs.items():
         print(f"{key} = {value}")
