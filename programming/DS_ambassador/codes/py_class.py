@@ -23,7 +23,7 @@ class Player():
         return self.lvl
 
     def level_up(self):
-        self.lvl += 1 # equivalent to self.lvl = self.lvl + 1
+        self.lvl += 1
 
     def exlixir(self, type='hp'):
         if type == 'hp':
@@ -39,7 +39,7 @@ class Player():
 
 
 # Create an object of Player class
-player1 = Player()
+player1 = Player()             # instance of Player class
 player1.method1()              # This is method 1
 player1.challenge('Jack')      # I challenge you, Jack!
 print(player1.get_lvl())       # 1
