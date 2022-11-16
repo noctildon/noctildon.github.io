@@ -15,12 +15,12 @@ def job(x):
     # calculate factorial x for demo
     a = factorial(x)
     b = factorial(x+1)
-    r = b/a
+    result = b/a
 
     # save the result to a file
     with lock:
         with open(outputFile, 'a') as f:
-            f.write(f'{x+1}!/{x}! = {r}\n')
+            f.write(f'{x+1}!/{x}! = {result}\n')
 
 
 def multicore():
@@ -30,7 +30,7 @@ def multicore():
 
     # 1st arg is the function
     # 2nd is the inputs of the function (use array to wrap multiple parameters)
-    pool.map(job, range(100000)) # calculate 0! to 99999!
+    pool.map(job, range(10000)) # calculate 0! to 9999!
 
 
 # memory sharing

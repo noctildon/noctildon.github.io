@@ -1,6 +1,8 @@
 """
 Pandas handles data in a tabular format, similar to a spreadsheet or SQL table.
 It is a powerful tool for data analysis and manipulation.
+
+$ pip install pandas
 """
 
 import pandas as pd

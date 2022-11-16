@@ -1,4 +1,5 @@
 """
+OOP = Object Oriented Programming
 Class combines data (variables) and functions
 keywords: class, self, __init__, attributes, methods
 """
@@ -7,6 +8,7 @@ class Player():
     # self is a reference to the class itself
     # self is the first argument of every class function
     def __init__(self, hp=50, mp=20):
+        # initialize the class
         self.lvl = 1  # level
         self.hp = hp  # health points
         self.mp = mp  # magic points
@@ -25,14 +27,14 @@ class Player():
     def level_up(self):
         self.lvl += 1
 
-    def exlixir(self, type='hp'):
+    def exlixir(self, type='hp', amount=10):
         if type == 'hp':
             print('You have been healed!')
             self.hp += 20
 
         elif type == 'mp':
             print('You have been restored!')
-            self.mp += 10
+            self.mp += amount
 
         else:
             print("Invalid type")
@@ -64,11 +66,11 @@ class Mage(Player):
     def fireball(self):
         print('Fireball!')
 
-    def exlixir(self):
-        Player.exlixir(self, 'mp')
+    def exlixir(self, amount):
+        Player.exlixir(self, 'mp', amount)
 
 
 mage1 = Mage()
 mage1.fireball()            # Fireball!
-mage1.exlixir()             # You have been restored!
-print(mage1.hp, mage1.mp)   # 50 110
+mage1.exlixir(90)           # You have been restored!
+print(mage1.hp, mage1.mp)   # 50 190
