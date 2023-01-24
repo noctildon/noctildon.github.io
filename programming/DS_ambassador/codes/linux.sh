@@ -2,6 +2,7 @@
 
 # hashtag is used for comments
 # writing the 1st line "#!/bin/bash" is a good practice even though it is not necessary
+# TAMU VPN is a must for anyone outside the campus. Set it up by following https://connect.tamu.edu/
 
 
 #################################################################
@@ -9,6 +10,7 @@
 echo "Hello World"   # print
 pwd                  # current directory
 cd /home/username    # change directory
+cd ..                # go to the parent directory
 which python3        # check the path
 python --version     # check the version
 history              # list all commands you entered
@@ -16,6 +18,7 @@ history              # list all commands you entered
 ls      # list files
 ls -l   # list files with details
 ls -la  # list files with details and hidden files
+ls | grep keyword   # list files filtered by a keyword
 
 touch file.txt    # create a file
 mkdir directory   # create an empty directory
@@ -25,13 +28,15 @@ cp oldFile.txt newFile.txt      # copy a file
 cp -r oldDirectory newDirectory # copy a directory
 mv oldFile.txt newFile.txt      # move a file
 mv oldDirectory newDirectory    # move a directory
-cat file.txt      # read a file
-nano file.txt     # edit a file (with nano editor)
-
+cat file.txt         # read a file
+nano file.txt        # edit a file (with nano editor)
+chmod +x file.txt    # change the permission of a file (make it executable)
+./script.sh          # run a script
 
 #################################################################
 ### Terra (https://hprc.tamu.edu/wiki/Terra)
 ssh NetID@terra.tamu.edu     # login to Terra
+showquota                    # check the disk usage
 exit                         # exit from Terra
 cd $HOME       # Home directory, limited space, where you usually save the settings
 cd $SCRATCH    # navigate to SCRATCH folder because it has more space
@@ -44,7 +49,7 @@ scp -r localFolder NetID@terra.tamu.edu:/scratch/user/NetID/remoteFolder
 scp NetID@terra.tamu.edu:/scratch/user/NetID/remoteFile.txt localFile.txt
 scp -r NetID@terra.tamu.edu:/scratch/user/NetID/remoteFolder localFolder
 
-module spider python3     # search available modules by a keyword
+module spider python      # search available modules by a keyword
 module load intel/2020b   # load a module
 
 
@@ -70,6 +75,7 @@ your_job_script.sh
 
 sbatch job.slurm    # submit a job
 squeue -u NetID     # check the status of a job
+scancel jobID       # cancel a job
 myproject           # check the SU balance
 
 
@@ -97,9 +103,15 @@ git branch                # check the branch
 git branch branchName     # create a new branch
 git checkout branchName   # switch to a branch
 
+git clone https://github.com/LazyVim/LazyVim  # clone a github repository
+
 
 #################################################################
 ### unison: sync tool (https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html)
 # Mac: brew install unison
 # Linux: sudo apt-get install unison
 
+
+#################################################################
+# Other resources
+# https://hprc.tamu.edu/training/primers_popup.html
