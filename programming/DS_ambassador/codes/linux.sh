@@ -103,11 +103,26 @@ git branch                # check the branch
 git branch branchName     # create a new branch
 git checkout branchName   # switch to a branch
 
-git clone https://github.com/LazyVim/LazyVim  # clone a github repository
+
+#################################################################
+### Github
+# Github is a website for hosting git repositories, and it's free
+# It mainly serves two purposes: 1) share your code with others, 2) backup your code
+
+git clone https://github.com/LazyVim/LazyVim  # download a github repository, no account needed
+
+
+# register and create a new repository on the Github website, and set it to private
+git remote add origin  # add a remote repository
+git push -u origin     # push the changes to the remote repository
+git pull origin        # pull the changes from the remote repository
+
 
 
 #################################################################
 ### unison: sync tool (https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html)
+# SKIP this tool. This is not useful because Terra/Grace has no unsion installed
+
 # Mac: brew install unison
 # Linux: sudo apt-get install unison
 
