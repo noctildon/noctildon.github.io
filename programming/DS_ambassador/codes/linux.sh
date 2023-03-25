@@ -20,10 +20,10 @@ ls -l   # list files with details
 ls -la  # list files with details and hidden files
 ls | grep keyword   # list files filtered by a keyword
 
-touch file.txt    # create a file
+touch file.txt    # create an empty file
 mkdir directory   # create an empty directory
 rm file.txt       # remove a file **CAUTION** once removed, it cannot be recovered**
-rm -r directory   # remove a directory (r means recursive)
+rm -r directory   # remove a directory (-r means recursive)
 cp oldFile.txt newFile.txt      # copy a file
 cp -r oldDirectory newDirectory # copy a directory
 mv oldFile.txt newFile.txt      # move a file
@@ -49,7 +49,7 @@ scp -r localFolder NetID@terra.tamu.edu:/scratch/user/NetID/remoteFolder
 scp NetID@terra.tamu.edu:/scratch/user/NetID/remoteFile.txt localFile.txt
 scp -r NetID@terra.tamu.edu:/scratch/user/NetID/remoteFolder localFolder
 
-module spider python      # search available modules by a keyword
+module spider python/3    # search available modules by a keyword
 module load intel/2020b   # load a module
 
 
@@ -120,11 +120,18 @@ git pull origin        # pull the changes from the remote repository
 
 
 #################################################################
-### unison: sync tool (https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html)
-# SKIP this tool. This is not useful because Terra/Grace has no unsion installed
+### unison: sync tool
+# docs
+# https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html)
+# https://github.com/bcpierce00/unison/wiki/Downloading-Unison
 
+# quick install for mac and linux
 # Mac: brew install unison
 # Linux: sudo apt-get install unison
+
+ln terra.prf ~/.unison # link to the home folder (may vary depending on the OS)
+unison terra           # sync the files between local and remote
+# remember to add "ml unison" in .bashrc in Terra
 
 
 #################################################################
