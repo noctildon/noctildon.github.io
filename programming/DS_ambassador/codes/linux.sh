@@ -1,17 +1,15 @@
-#!/bin/bash
-
 # hashtag is used for comments
-# writing the 1st line "#!/bin/bash" is a good practice even though it is not necessary
 # TAMU VPN is a must for anyone outside the campus. Set it up by following https://connect.tamu.edu/
-
 
 #################################################################
 ### Linux basic commands
+ssh NetID@terra.tamu.edu     # login to Terra
+exit                         # disconnect
 echo "Hello World"   # print
 pwd                  # current directory
 cd /home/username    # change directory
 cd ..                # go to the parent directory
-which python3        # check the path
+which python3        # check the path (used to check if the command exists or not)
 python --version     # check the version
 history              # list all commands you entered
 
@@ -32,14 +30,7 @@ cat file.txt         # read a file
 nano file.txt        # edit a file (with nano editor)
 chmod +x file.txt    # change the permission of a file (make it executable)
 ./script.sh          # run a script
-
-#################################################################
-### Terra (https://hprc.tamu.edu/wiki/Terra)
-ssh NetID@terra.tamu.edu     # login to Terra
-showquota                    # check the disk usage
-exit                         # exit from Terra
-cd $HOME       # Home directory, limited space, where you usually save the settings
-cd $SCRATCH    # navigate to SCRATCH folder because it has more space
+nohup ./script.sh > /dev/null 2>&1 & # run a script and detach
 
 # copy file from local to remote
 scp localFile.txt NetID@terra.tamu.edu:/scratch/user/NetID/remoteFile.txt
@@ -49,15 +40,28 @@ scp -r localFolder NetID@terra.tamu.edu:/scratch/user/NetID/remoteFolder
 scp NetID@terra.tamu.edu:/scratch/user/NetID/remoteFile.txt localFile.txt
 scp -r NetID@terra.tamu.edu:/scratch/user/NetID/remoteFolder localFolder
 
-module spider python/3    # search available modules by a keyword
-module load intel/2020b   # load a module
-
-
 
 #################################################################
-### the wiki page: https://hprc.tamu.edu/wiki/Main_Page
-### slurm job file
+### Terra specific commands (https://hprc.tamu.edu/wiki/Terra)
+cd $HOME         # Home directory, limited space, where you usually save the settings
+cd $SCRATCH      # navigate to SCRATCH folder because it has more space
+showquota        # check the disk usage
+sbatch job.slurm # submit a job
+squeue -u NetID  # check the status of a job
+scancel jobID    # cancel a job
+myproject        # check the SU balance
+module spider Python/3    # search available modules by a keyword
+module load intel/2020b   # load a module (or 'ml' for short)
 
+
+### alias setting
+nano ~/.bashrc               # edit the bashrc file
+alias mp='myproject -l'      # add the shourtcut commands
+alias sq='squeue -u NetID'   # alias SHORTCOMMAND='LONG COMMANDS'
+source ~/.bashrc             # reload the bashrc file
+
+
+### slurm job file. https://hprc.tamu.edu/wiki/Main_Page
 #==================begin of job.slurm==================================#
 #!/bin/bash
 
@@ -70,24 +74,10 @@ module load intel/2020b   # load a module
 #SBATCH -e %j.err                  # error file name (if error occurs)
 #SBATCH --account=1234567890       # account number
 
+ml intel/2020b
+cd your_job_workspace
 your_job_script.sh
 #===================end of job.slurm=================================#
-
-sbatch job.slurm    # submit a job
-squeue -u NetID     # check the status of a job
-scancel jobID       # cancel a job
-myproject           # check the SU balance
-
-
-#################################################################
-### alias setting
-nano ~/.bashrc   # edit the bashrc file
-
-# add the shourtcut commands
-alias mp='myproject -l'
-alias sq='squeue -u NetID'
-
-source ~/.bashrc   # reload the bashrc file
 
 
 #################################################################
@@ -111,25 +101,23 @@ git checkout branchName   # switch to a branch
 
 git clone https://github.com/LazyVim/LazyVim  # download a github repository, no account needed
 
-
 # register and create a new repository on the Github website, and set it to private
 git remote add origin  # add a remote repository
 git push -u origin     # push the changes to the remote repository
 git pull origin        # pull the changes from the remote repository
 
 
-
 #################################################################
 ### unison: sync tool
 # docs
-# https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html)
+# https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html
 # https://github.com/bcpierce00/unison/wiki/Downloading-Unison
 
-# quick install for mac and linux
+# quick install for mac and linux. It needs to be installed on both local and remote
 # Mac: brew install unison
 # Linux: sudo apt-get install unison
 
-ln terra.prf ~/.unison # link to the home folder (may vary depending on the OS)
+ln terra.prf ~/.unison # link to the home folder (may vary depending on the OS, see the manual for details)
 unison terra           # sync the files between local and remote
 # remember to add "ml unison" in .bashrc in Terra
 
