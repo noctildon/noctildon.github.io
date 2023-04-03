@@ -10,7 +10,7 @@ pwd                  # current directory
 cd /home/username    # change directory
 cd ..                # go to the parent directory
 which python3        # check the path (used to check if the command exists or not)
-python --version     # check the version
+python3 --version    # check the version
 history              # list all commands you entered
 
 ls      # list files
@@ -26,10 +26,11 @@ cp oldFile.txt newFile.txt      # copy a file
 cp -r oldDirectory newDirectory # copy a directory
 mv oldFile.txt newFile.txt      # move a file
 mv oldDirectory newDirectory    # move a directory
-cat file.txt         # read a file
-nano file.txt        # edit a file (with nano editor)
-chmod +x file.txt    # change the permission of a file (make it executable)
-./script.sh          # run a script
+cat file.txt           # read a file
+nano file.txt          # edit a file (with nano editor)
+chmod +x file.txt      # change the permission of a file (make it executable)
+./script.sh            # run a script
+./script.sh > log.txt  # run a script and save the output to a file
 nohup ./script.sh > /dev/null 2>&1 & # run a script and detach
 
 # copy file from local to remote
@@ -43,15 +44,15 @@ scp -r NetID@terra.tamu.edu:/scratch/user/NetID/remoteFolder localFolder
 
 #################################################################
 ### Terra specific commands (https://hprc.tamu.edu/wiki/Terra)
-cd $HOME         # Home directory, limited space, where you usually save the settings
-cd $SCRATCH      # navigate to SCRATCH folder because it has more space
-showquota        # check the disk usage
-sbatch job.slurm # submit a job
-squeue -u NetID  # check the status of a job
-scancel jobID    # cancel a job
-myproject        # check the SU balance
-module spider Python/3    # search available modules by a keyword
-module load intel/2020b   # load a module (or 'ml' for short)
+cd $HOME                 # Home directory, limited space, where you usually save the settings
+cd $SCRATCH              # navigate to SCRATCH folder because it has more space
+showquota                # check the disk usage
+sbatch job.slurm         # submit a job
+squeue -u NetID          # check the status of a job
+scancel jobID            # cancel a job
+myproject                # check the SU balance
+module spider Python/3   # search available modules by a keyword
+module load intel/2020b  # load a module (or 'ml' for short)
 
 
 ### alias setting
@@ -74,9 +75,10 @@ source ~/.bashrc             # reload the bashrc file
 #SBATCH -e %j.err                  # error file name (if error occurs)
 #SBATCH --account=1234567890       # account number
 
-ml intel/2020b
-cd your_job_workspace
-your_job_script.sh
+ml intel/2020b              # load the module
+cd your_job_workspace       # navigate to the workspace
+your_job_script.sh          # run the job script
+python3 your_job_script.py  # could also be a python script
 #===================end of job.slurm=================================#
 
 
@@ -101,7 +103,7 @@ git checkout branchName   # switch to a branch
 
 git clone https://github.com/LazyVim/LazyVim  # download a github repository, no account needed
 
-# register and create a new repository on the Github website, and set it to private
+# register and create a new repository on the Github website, and set it private
 git remote add origin  # add a remote repository
 git push -u origin     # push the changes to the remote repository
 git pull origin        # pull the changes from the remote repository
