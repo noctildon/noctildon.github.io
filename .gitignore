@@ -1,2 +1,5 @@
 _site/
+__pycache__/
+*.synctex.gz
 .vscode
+.ipynb_checkpoints
