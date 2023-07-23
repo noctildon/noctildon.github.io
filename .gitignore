@@ -1,5 +1,2 @@
-.vsocde
-.vscode/
-*.css.map
-__pycache__/
-.ipynb_checkpoints
+_site/
+.vscode
