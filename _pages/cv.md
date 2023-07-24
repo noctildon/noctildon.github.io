@@ -1,12 +1,12 @@
 ---
 layout: archive
-title: "CV"
+title: "CV / Resume"
 permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
 ---
 
-<iframe src="/resume/industry_short.pdf" width="100%" height="500" frameborder="no" border="0" marginwidth="0" marginheight="0"></iframe>
-
-You can download a PDF copy of my CV [here](/resume/industry_short.pdf).
+- <a href="/resume/industry_short.pdf" target="_blank">Industry resume (short version)</a>
+- <a href="/resume/industry_long.pdf" target="_blank">Industry resume (long version)</a>
+- <a href="/resume/academics.pdf" target="_blank">Academic CV</a>

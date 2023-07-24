@@ -1,7 +1,6 @@
 ## This is my personal website, click https://noctildon.github.io/
 
 ## TODO
-- Add talks
-- Add teachings
+- write about me
 - Add research
-- Add variation of resume/CV
+- add more posts
