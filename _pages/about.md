@@ -8,4 +8,10 @@ redirect_from:
   - /about.html
 ---
 
-This will show the contents in **_pages/about.md**
+I am a Phd student at physics department, <a href="http://www.tamu.edu/">Texas A&M University</a>, College Station, Texas, US.
+My research interest includes
+  - neutrino physics
+  - nuclear physics
+  - dark matter
+
+My current research focuses on probing BSM particle (such as dark matter) by inelastic nucleus scattering.
