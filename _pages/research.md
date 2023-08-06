@@ -3,12 +3,12 @@ layout: archive
 title: "Research"
 permalink: /research/
 author_profile: true
-header:
-  og_image: "research/ecdf.png"
 ---
 
-This shows the contents in **_pages/research.md**
-
+My research includes 3 aspects
+- nuclear physics
+- dark matter physics
+- neutrino physics
 
 <nbsp>
 
