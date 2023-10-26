@@ -6,3 +6,11 @@
 - Add more posts
 - Add more research
    - add mathematica 7operator
+
+
+## My note
+Use
+```bash
+$ bundle exec jekyll serve --livereload
+```
+to launch the server locally

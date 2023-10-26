@@ -3,3 +3,4 @@ __pycache__/
 *.synctex.gz
 .vscode
 .ipynb_checkpoints
+resume/transcript.pdf
