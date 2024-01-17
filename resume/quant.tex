@@ -1,98 +1,103 @@
 % https://www.overleaf.com/latex/templates/cis-grad-template-dev/pjcttwysqvym
 
-
 % Use the custom resume.cls style
 \documentclass{resume}
 
 % Document margins
 \usepackage[top=0.15in, bottom=0.15in, right=0.4in, left=0.3in]{geometry}
+\usepackage{fontawesome}
+
 
 \name{Wei-Chih Huang}
 \address{
-\href{mailto:noctildon2@gmail.com}{Email} \\
-\href{https://www.linkedin.com/in/wei-chih-huang-38b075233/}{Linkedin} \\
-\href{https://github.com/noctildon}{Github} \\
-\href{https://noctildon.github.io}{Personal Website}}
+\href{mailto:noctildon2@gmail.com}{\faEnvelope\, noctildon2@gmail.com} \\
+\href{https://www.linkedin.com/in/wei-chih-huang}{\faLinkedinSquare \,/in/wei-chih-huang} \\
+\href{https://github.com/noctildon}{\faGithub \, noctildon} \\
+\href{https://noctildon.github.io}{\faDesktop \, Personal Site}
+}
 
 
 \begin{document}
 
-\vspace{-2.75em}
+\vspace{-1.5em}
 \begin{rSection}{Education}
-{\bf PhD in Physics}, Texas A\&M University, US \hfill {Aug 2019 - Aug 2025 (expected)} \\
-{\bf BS in Physics}, National Tsing Hua University, Taiwan \hfill {Aug 2015 - Jun 2019}
-\vspace{-0.5em}
+\vspace{-0.25em}
+{\bf PhD in Physics}, Texas A\&M University, US \hfill {Aug. 2019 - Aug. 2025 (expected)} \\
+{\bf BS in Physics}, National Tsing Hua University, Taiwan \hfill {Aug. 2015 - Jun. 2019}
+\end{rSection}
 
-\begin{rSection}{Publication}
+
+\vspace{-0.5em}
+\begin{rSection}{Publications}
     \begin{itemize}
-        \item Probing the dark sector with nuclear transition photons \hfill \href{https://arxiv.org/pdf/2302.10250.pdf}{arxiv}\\
-        {\footnotesize \it Bhaskar Dutta, \textbf{Wei-Chih Huang}, Jayden L. Newstead}
-        \item Inelastic nuclear scattering from neutrinos and dark matter \hfill \href{https://arxiv.org/pdf/2206.08590.pdf}{arxiv}\\
-        {\footnotesize \it Bhaskar Dutta, \textbf{Wei-Chih Huang}, Jayden L. Newstead, Vishvas Pandey}
-        \item Axion-Like Particle Production at Beam Dump Experiments with Distinct Nuclear Excitation Lines \hfill \href{https://arxiv.org/pdf/2207.13659.pdf}{arxiv}\\
-        {\footnotesize \it Loyd Waites, Adrian Thompson, Adriana Bungau, Janet M. Conrad, Bhaskar Dutta, \textbf{Wei-Chih Huang}, Doojin Kim, Michael Shaevitz, Joshua Spitz}
+        \item Probing the dark sector with nuclear transition photons \hfill \href{https://arxiv.org/pdf/2302.10250.pdf}{arxiv}
+        \newline{\footnotesize \it Bhaskar Dutta, \textbf{Wei-Chih Huang}, Jayden L. Newstead}
+        \item Inelastic nuclear scattering from neutrinos and dark matter \hfill \href{https://arxiv.org/pdf/2206.08590.pdf}{arxiv}
+        \newline{\footnotesize \it Bhaskar Dutta, \textbf{Wei-Chih Huang}, Jayden L. Newstead, Vishvas Pandey}
+        \item Short Baseline Neutrino Anomalies at Stopped Pion Experiments \hfill \href{https://arxiv.org/abs/2310.13194}{arxiv}
+        \newline{\footnotesize \it Iain A. Bisset, Bhaskar Dutta, \textbf{Wei-Chih Huang}, Louis E. Strigari}
+        \item Axion-Like Particle Production at Beam Dump Experiments with Distinct Nuclear Excitation Lines \hfill \href{https://arxiv.org/pdf/2207.13659.pdf}{arxiv}
+        \newline{\footnotesize \it Loyd Waites, Adrian Thompson, Adriana Bungau, Janet M. Conrad, Bhaskar Dutta, \textbf{Wei-Chih Huang}, Doojin Kim, Michael Shaevitz}
     \end{itemize}
 \end{rSection}
 
 
+\vspace{-0.5em}
 \begin{rSection}{Experience}
-    \vspace{-1.25em}
-    \item \textbf{Inelastic Neutrino/Dark Matter - Nucleus Scattering by BIGSTICK} \hfill {\href{https://github.com/noctildon/Inelastic}{github}}
+    \vspace{-1em}
+    \item \textbf{Research Assistant} - Physics Department, Texas A\&M University \hfill Aug. 2019 - present
+        % \newline\hspace*{0.5em} {\normalsize PhD dissertation topic on dark matter search using nucleus scattering}
         \begin{itemize}
-        \itemsep -3pt {}
-        \item Parallelized and compiled BIGSTICK with MPI/OpenMP in computer cluster
-        \item Did the statistical analysis on the large multi-dimensional outputs by Python and Mathematica
-        \item Published 3 papers and presented several successful talks at conferences
+        \item Built physical model and conducted the statistical analysis on the large multi-dimensional data by Python
+        \item Accelerated the analysis by 1000 times with multiprocessing, caching, and C/C\texttt{++}
+        \item Published 4 papers in high impact journals and presented several successful talks at international conferences
         \end{itemize}
-    \item \textbf{Searching for Axion/Dark matter in High Energy Physics Experiments} \hfill {\href{https://github.com/noctildon/alplib}{axion}}, {\href{https://github.com/noctildon/lightDM}{dark matter}}
+
+    \item \textbf{Independent Data Science Researcher} - {Pro Cyclists Race Analysis} (\href{https://github.com/noctildon/pro_cyclists}{github repo}) \hfill Apr. 2022 - present
+        % \newline\hspace*{0.5em} {\normalsize Data analysis of professional cycling races and forecasted of the outcomes by machine learning models}
         \begin{itemize}
-        \itemsep -3pt {}
-        \item Construct analytical models for axion and dark matter, and automated the statistical analysis with Python
-        \item Used Python multiprocessing and function caching to speed up the numerical analysis by 1000 times on average
-        \end{itemize}
-    \item \textbf{Pro Cyclists Race Analysis} - {NumPy, Pandas, BeautifulSoup, scikit-learn, XGBoost, Pytorch, Runpod} \hfill {\href{https://github.com/noctildon/pro_cyclists}{github}}
-        \begin{itemize}
-        \itemsep -3pt {}
-        \item Implemented high performance multi-threading web scraping script by BeautifulSoup (5 times faster)
+        \item Achieved 20\% better performance than a trivial model with machine learning models using Pytorch
+        \item Boosted web scraping BeautifulSoup by 500\% with multi-threading
         \item Preprocessed the data (clean, format, normalize) with NumPy, Pandas, SciPy, and scikit-learn
-        \item Made the prediction with 20\% better performance than a trivial model with scikit-learn, XGBoost, and Pytorch
-        \item Deployed the data and model to \href{https://www.runpod.io/}{Runpod} (GPU cloud service) for training and saved 80\% costs
+        \item Saved 80\% costs compared to AWS, GCP, Azure by deploying data and model to Runpod (GPU cloud)
         \end{itemize}
-    \item \textbf{PyBigstick} - {NumPy, Pandas, Matplotlib, Streamlit, Docker} \hfill {\href{https://github.com/noctildon/pyBigstick}{github}}
+
+    \item \textbf{Data Science Ambassador} - Physics Department, Texas A\&M University \hfill Aug. 2022 - Aug. 2023
+        % \newline\hspace*{0.5em} {\normalsize Data Science Ambassador representing Physics Department}
         \begin{itemize}
-        \itemsep -3pt {}
-        \item Saved 95\% of time writing input scripts for \href{https://github.com/cwjsdsu/BigstickPublick}{BIGSTICK} (Large Scale Nuclear Shell Model Code)
-        \item Analyzed any nucleus and predict experimental outcomes with at least 60\% accuracy
-        \item Used Streamlit and Docker to create an interactive data dashboard on any platform
+        \item Provided training and consulting to the department and the students (\href{https://noctildon.github.io/DS_ambassador/index.html}{webpage})
+        \item Designed interactive workshops on topics including Python, Linux, statistics, data analysis, and machine learning
         \end{itemize}
-    \item \textbf{Aggie Job Referral} - {Django, SQLite, PostgreSQL, Heroku, Bootstrap} \hfill {\href{https://github.com/noctildon/aggie-job-referral}{github}}
+
+    \item \textbf{Project Manager} - \href{https://aggiecodingclub.com}{Aggie Coding Club} \hfill Jan. 2022 - Jan. 2023
+        % \newline\hspace*{0.5em} {\normalsize A dynamic website designed to cater to students' job-seeking requirements ({\href{https://github.com/noctildon/aggie-job-referral}{github repo}})}
         \begin{itemize}
-        \itemsep -3pt {}
+        \item Led a 10-people team and developed a dynamic and responsive website using Django (Python)
+        \item Deployed the website at zero cost on Heroku cloud platform
         \item Built a referral website to reduce the time of networking by 40\%
-        \item Deployed to Heroku with specially designed PostgreSQL database schema to save the disk space by 20\%
+        \item Designed PostgreSQL database schema to save the disk space by 20\%
+        \end{itemize}
+
+    \item \textbf{Teaching Assistant} - Physics Department, Texas A\&M University \hfill Aug. 2019 - Dec. 2022
+        \begin{itemize}
+        \item Taught and graded college Newtonian Mechanics, Electromagnetism, Thermodynamics, and Statistical Mechanics
+        \item Demonstrated hands-on experiments and post-lab data analysis
         \end{itemize}
 \end{rSection}
 
 
-\begin{rSection}{Extra-Curricular Activities}
-\begin{itemize}
-    \item Project Manager at \href{https://aggiecodingclub.com/}{Aggie Coding Club} \hfill 2022
-    \item Data Science Ambassador representing Physics Department at Texas A\&M \href{https://noctildon.github.io/DS_ambassador/index.html}{webpage} \hfill 2022 - 2023
-\end{itemize}
-\end{rSection}
-
-
+\vspace{-0.5em}
 \begin{rSection}{Honors and Awards}
     \begin{itemize}
         \item \textbf{Data Science Ambassador Scholarship}\hfill 2022 - 2023\\
         Data Science Ambassador Scholarship Program at Texas A\&M Institute of Data Science
         \item \textbf{Three Years Tsing Hua University Scholarship (2\% acceptance rate)} \hfill 2015 - 2018 \\
-        Tuition wavier plus accommodation and textbooks subsidy
+        Tuition wavier, housing accommodation and textbooks subsidy
         \item \textbf{Undergraduate Research Scholarship} \hfill Fall 2018 \\
         The scholarship for the New Gravity Theory
     \end{itemize}
 \end{rSection}
 
-\end{rSection}
+
 
 \end{document}

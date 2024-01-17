@@ -1,0 +1,129 @@
+% https://www.overleaf.com/latex/templates/cis-grad-template-dev/pjcttwysqvym
+
+% Use the custom resume.cls style
+\documentclass{resume}
+
+% Document margins
+\usepackage[top=0.15in, bottom=0.15in, right=0.4in, left=0.3in]{geometry}
+\usepackage{fontawesome}
+
+
+\name{Wei-Chih Huang}
+\address{
+\href{mailto:noctildon2@gmail.com}{\faEnvelope\, noctildon2@gmail.com} \\
+\href{https://www.linkedin.com/in/wei-chih-huang}{\faLinkedinSquare \,/in/wei-chih-huang} \\
+\href{https://github.com/noctildon}{\faGithub \, noctildon} \\
+\href{https://noctildon.github.io}{\faDesktop \, Personal Site}
+}
+
+
+\begin{document}
+\vspace{-1.5em}
+\begin{rSection}{Objective}
+    Physics PhD candidate with extensive data analytical skills,
+    actively seeking opportunities in \textbf{\textit{data science/analysis}} within a vibrant and intellectually stimulating learning environment.
+\end{rSection}
+
+
+\vspace{-0.25em}
+\begin{rSection}{Education}
+\vspace{-0.25em}
+{\bf PhD in Physics}, Texas A\&M University, US \hfill {Aug. 2019 - Aug. 2025 (expected)} \\
+{\bf BS in Physics}, National Tsing Hua University, Taiwan \hfill {Aug. 2015 - Jun. 2019}
+\end{rSection}
+
+
+\vspace{-0.25em}
+\begin{rSection}{Experience}
+    \vspace{-1.5em}
+    \item \textbf{Independent Data Science Researcher} - {Pro Cyclists Race Analysis} (\href{https://github.com/noctildon/pro_cyclists}{github repo}) \hfill Apr. 2022 - present
+        % \newline\hspace*{0.5em} {\normalsize Data analysis of professional cycling races and forecasted of the outcomes by machine learning models}
+        \begin{itemize}
+        \item Achieved 20\% better performance than a trivial model with machine learning models using Pytorch
+        \item Boosted web scraping BeautifulSoup by 500\% with multi-threading
+        \item Preprocessed the data (clean, format, normalize) with NumPy, Pandas, SciPy, and scikit-learn
+        \item Saved 80\% costs compared to AWS, GCP, Azure by deploying data and model to Runpod (GPU cloud)
+        \end{itemize}
+
+    \item \textbf{Data Science Ambassador} - Physics Department, Texas A\&M University \hfill Aug. 2022 - Aug. 2023
+        % \newline\hspace*{0.5em} {\normalsize Data Science Ambassador representing Physics Department}
+        \begin{itemize}
+        \item Provided training and consulting to the department and the students (\href{https://noctildon.github.io/DS_ambassador/index.html}{webpage})
+        \item Designed interactive workshops on topics including Python, Linux, statistics, data analysis, and machine learning
+        \end{itemize}
+
+    \item \textbf{Project Manager} - \href{https://aggiecodingclub.com}{Aggie Coding Club} \hfill Jan. 2022 - Jan. 2023
+        % \newline\hspace*{0.5em} {\normalsize A dynamic website designed to cater to students' job-seeking requirements ({\href{https://github.com/noctildon/aggie-job-referral}{github repo}})}
+        \begin{itemize}
+        \item Led a 10-people team and developed a dynamic and responsive website using Django (Python)
+        \item Deployed the website at zero cost on Heroku cloud platform
+        \item Built a referral website to reduce the time of networking by 40\%
+        \item Designed PostgreSQL database schema to save the disk space by 20\%
+        \end{itemize}
+
+    \item \textbf{Research Assistant} - Physics Department, Texas A\&M University \hfill Aug. 2019 - present
+        % \newline\hspace*{0.5em} {\normalsize PhD dissertation topic on dark matter search using nucleus scattering}
+        \begin{itemize}
+        \item Built physical model and conducted the statistical analysis on the large multi-dimensional data by Python
+        \item Accelerated the analysis by 1000 times with multiprocessing, caching, and C/C\texttt{++}
+        \item Published 4 papers in high impact journals and presented several successful talks at international conferences
+        \end{itemize}
+
+    \item \textbf{Teaching Assistant} - Physics Department, Texas A\&M University \hfill Aug. 2019 - Dec. 2022
+        \begin{itemize}
+        \item Taught and graded college Newtonian Mechanics, Electromagnetism, Thermodynamics, and Statistical Mechanics
+        \item Demonstrated hands-on experiments and post-lab data analysis
+        \end{itemize}
+\end{rSection}
+
+\vspace{-0.25em}
+\begin{rSection}{Certifications}
+    \vspace{-1.2em}
+    \item \href{https://www.coursera.org/account/accomplishments/verify/N4T4JR8XLU3Z}{\color{black}{~~~-~~Machine Learning Foundations: Algorithmic Foundations}} \vspace{-0.5em}
+    \item \href{https://www.coursera.org/account/accomplishments/verify/4X4TD24NFAY4}{\color{black}{~~~-~~Machine Learning Foundations: Mathematical Foundations}} \vspace{-0.5em}
+    \item \href{https://www.coursera.org/account/accomplishments/verify/TJKKSPN42ZEE}{\color{black}{~~~-~~Machine Learning Techniques}} \vspace{-0.5em}
+    \item \href{https://www.coursera.org/account/accomplishments/verify/KHCRSS4J4TZE}{\color{black}{~~~-~~Divide and Conquer, Sorting and Searching, and Randomized Algorithms}} \vspace{-0.5em}
+    \item \href{https://www.coursera.org/account/accomplishments/verify/5B7WBDL9BHVF}{\color{black}{~~~-~~A Crash Course in Causality: Inferring Causal Effects from Observational Data}}  \vspace{-0.5em}
+\end{rSection}
+
+\vspace{-0.25em}
+\begin{rSection}{SKILLS}
+    \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+    Languages & Python, Bash, C/C\texttt{++}, SQL, Mathematica, Javascript, HTML, CSS\\
+    Concepts & Statistics, Algorithm, Machine Learning, Deep Learning, Cloud computing, API, Database, OOP\\
+    Libraries & NumPy, Matplotlib, Pandas, SciPy, Streamlit, PySpark, multiprocess, scikit-learn, BeautifulSoup\\
+    Frameworks & PyTorch, TensorFlow, Django, PostgreSQL, PyQt5\\
+    Tools & Git, GitHub, Linux, Docker, Heroku, Kaggle, Google Colab, Runpod
+    % Soft Skills & Time Management, Teamwork, Communication, Problem Solving, Leadership
+    \end{tabular}
+\end{rSection}
+
+
+% \begin{rSection}{Publications}
+%     \begin{itemize}
+%         \item Probing the dark sector with nuclear transition photons \hfill \href{https://arxiv.org/pdf/2302.10250.pdf}{arxiv}
+%         % {\footnotesize \it Bhaskar Dutta, \textbf{Wei-Chih Huang}, Jayden L. Newstead}
+%         \item Inelastic nuclear scattering from neutrinos and dark matter \hfill \href{https://arxiv.org/pdf/2206.08590.pdf}{arxiv}
+%         % {\footnotesize \it Bhaskar Dutta, \textbf{Wei-Chih Huang}, Jayden L. Newstead, Vishvas Pandey}
+%         \item Short Baseline Neutrino Anomalies at Stopped Pion Experiments \hfill \href{https://arxiv.org/abs/2310.13194}{arxiv}
+%         % {\footnotesize \it Iain A. Bisset, Bhaskar Dutta, \textbf{Wei-Chih Huang}, Louis E. Strigari}
+%         \item Axion-Like Particle Production at Beam Dump Experiments with Distinct Nuclear Excitation Lines \hfill \href{https://arxiv.org/pdf/2207.13659.pdf}{arxiv}
+%         % {\footnotesize \it Loyd Waites, Adrian Thompson, Adriana Bungau, Janet M. Conrad, Bhaskar Dutta, \textbf{Wei-Chih Huang}, Doojin Kim, Michael Shaevitz}
+%     \end{itemize}
+% \end{rSection}
+
+
+% \begin{rSection}{Honors and Awards}
+%     \begin{itemize}
+%         \item \textbf{Data Science Ambassador Scholarship}\hfill 2022 - 2023\\
+%         Data Science Ambassador Scholarship Program at Texas A\&M Institute of Data Science
+%         \item \textbf{Three Years Tsing Hua University Scholarship (2\% acceptance rate)} \hfill 2015 - 2018 \\
+%         Tuition wavier plus accommodation and textbooks subsidy
+%         \item \textbf{Undergraduate Research Scholarship} \hfill Fall 2018 \\
+%         The scholarship for the New Gravity Theory
+%     \end{itemize}
+% \end{rSection}
+
+
+
+\end{document}
