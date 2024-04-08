@@ -6,7 +6,7 @@ date: 2023-05-08
 link: 'https://journals.aps.org/prd/abstract/10.1103/PhysRevD.107.095010'
 arxiv: 'https://arxiv.org/abs/2207.13659'
 inspirehep: 'https://inspirehep.net/literature/2126695'
-citation: 'Loyd Waites, Adrian Thompson, Adriana Bungau, Janet M. Conrad, Bhaskar Dutta, <strong>Wei-Chih Huang</strong>, Doojin Kim, Michael Shaevitz, and Joshua Spitz. <i>Phys. Rev. D 107, 095010</i>'
+citation: 'Loyd Waites, Adrian Thompson, Adriana Bungau, Janet M. Conrad, Bhaskar Dutta, <strong>Wei-Chih Huang</strong>, Doojin Kim, Michael Shaevitz, and Joshua Spitz. <i>PRD 107, 095010</i>'
 abstract: 'Searches for axionlike particles (ALPs) are motivated by the strong CP problem in particle physics
 and by unexplained dark matter in astrophysics. In this paper, we discuss novel ALP searches using
 monoenergetic nuclear deexcitation photons from a beam dump, using the isotope decay-at-rest (IsoDAR)

@@ -7,7 +7,7 @@ link: 'https://journals.aps.org/prd/abstract/10.1103/PhysRevD.106.113006'
 arxiv: 'https://arxiv.org/abs/2206.08590'
 github: 'https://github.com/noctildon/Inelastic'
 inspirehep: 'https://inspirehep.net/literature/2097598'
-citation: 'Bhaskar Dutta, <strong>Wei-Chih Huang</strong>, Jayden L. Newstead, and Vishvas Pandey. <i>Phys. Rev. D 106, 113006</i>'
+citation: 'Bhaskar Dutta, <strong>Wei-Chih Huang</strong>, Jayden L. Newstead, and Vishvas Pandey. <i>PRD 106, 113006</i>'
 abstract: 'Neutrinos with energy of order 10 MeV, such as from pion decay-at-rest sources, are an invaluable tool
 for studying low-energy neutrino interactions with nuclei—previously enabling the first measurement of
 coherent elastic neutrino-nucleus scattering. Beyond elastic scattering, neutrinos and dark matter in this

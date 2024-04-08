@@ -211,8 +211,6 @@ iso
 ```
 The orbit label always starts from 1.
 
-<!-- TODO: Add my program -->
-
 
 ### input script (*.in)
 
@@ -305,6 +303,7 @@ $ your_bigstick.x < create_strength.in
 ```
 Note that it's necessary to follow this order.
 
+**I wrote a python script to generate BIGSTICK input script, see https://github.com/noctildon/pyBigstick**
 
 ## Output files
 - *.wfn: BIGSTICK internal wavefunction binary. Not human readable
@@ -369,7 +368,6 @@ This is the operator value (f19_s.res)
 ## Conclusion
 Now you are ready to compute almost every kind of nucleus. But to get more practical and meaningful outcomes, there is still some work to do.
 
-<!-- TODO: include 7operator -->
 
 ## Reference and further reading
 - [BIGSTICK github repo](https://github.com/cwjsdsu/BigstickPublick)
