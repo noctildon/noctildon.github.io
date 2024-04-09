@@ -16,8 +16,7 @@ Inelastic nuclear scattering is the scattering in which the nucleus gets excited
 
 Shortly after the nucleus gets excited, it quickly (almost immediately) drop to ground state and meanwhile emits a photon. In experiment we catch this deexcitation photon as signal.
 
-<img src="/images/research/inel_nucleus_scattering.png" alt="drawing" width="600"/>
-
+![inel nucleus scattering](/images/research/inel_nucleus_scattering.png)
 
 ## Advantages and Disadvantages
 Such deexcitation photon has many advantages:

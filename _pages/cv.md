@@ -7,5 +7,5 @@ redirect_from:
   - /resume
 ---
 
-- <a href="/resume/industry.pdf" target="_blank">Resume (for industry)</a>
-- <a href="/resume/academics.pdf" target="_blank">Academic CV</a>
+- [Resume (for industry)](/resume/industry.pdf){:target="_blank"}
+- [Academic CV](/resume/academics.pdf){:target="_blank"}

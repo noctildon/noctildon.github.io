@@ -8,13 +8,12 @@ redirect_from:
   - /about.html
 ---
 
-I am a PhD student at physics department, <a href="https://www.tamu.edu/">Texas A&M University</a>, College Station, Texas, US.
+I am a PhD student at physics department, [Texas A&M University](https://www.tamu.edu/), College Station, Texas, US.
 My research interest includes
   - neutrino physics
   - nuclear physics
   - dark matter
 
-My current research focuses on probing BSM (<a href="https://en.wikipedia.org/wiki/Physics_beyond_the_Standard_Model">Beyond Standard Model</a>) particles such as <a href="https://en.wikipedia.org/wiki/Dark_matter">dark matter</a> and <a href="https://en.wikipedia.org/wiki/Axion">axion</a> by inelastic nucleus scattering.
+My current research focuses on probing BSM ([Beyond Standard Model](https://en.wikipedia.org/wiki/Physics_beyond_the_Standard_Model)) particles such as [dark matter](https://en.wikipedia.org/wiki/Dark_matter) and [axion](https://en.wikipedia.org/wiki/Axion) by inelastic nucleus scattering.
 
-
-Apart from physics, I'm also interested in data science and machine learning in the applications. See <a href="{{ base_path }}/posts">Posts</a> for the projects I've done.
+Apart from physics, I'm also interested in data science and machine learning in the applications. See [My Posts]({{ base_path }}/posts) for the projects I've done.
