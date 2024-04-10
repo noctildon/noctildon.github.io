@@ -4,7 +4,7 @@ layout: single-portfolio
 excerpt: "<img src='/images/research/nuclear-shells.png'>"
 collection: research
 order_number: 40
-date: 2023-08-06
+date: 2024-04-10
 ---
 <h6>Last update: {{ page.date | date: "%B %d, %Y" }}</h6>
 
@@ -13,6 +13,8 @@ BIGSTICK (Calvin, et al) is large scale nuclear shell model code written in FORT
 
 
 ## Nuclear physics
+
+### Nuclear quantum number
 A nucleus is made of protons and neutrons. For example $^{12}{\rm C}$ has 6 protons and 6 neutrons, $^{133}{\rm Cs}$ has 55 protons and 78 protons. That is, nucleus is a many-fermion system. There is no analytical solution in any literature (except simple enough nucleus like hydrogen and helium). Thus we have to have a numerical calculator. One of the famous model is nuclear shell model. Just like Bohr model (hydrogen atom model), it formulates the nucleons into a serial of shells. Each shell has 4 **quantum number**.
 
 - nodal (radial) quantum number $n$
@@ -31,10 +33,15 @@ j &= l \pm {1 \over 2} \\
 $$
 
 Note that in some notation $n$ starts from 1. In particular $l$ has special notation:
+
 | $l$ notation | s | p | d | f | g |
 | -----------  | - | - | - | - | - |
 | $l$ value    | 0 | 1 | 2 | 3 | 4 |
+
 and so on
+
+
+### Nuclear shell
 
 To label a shell, we use the following notation
 
@@ -45,6 +52,7 @@ A shell spectrum looks like this
 <img src="/images/research/nuclear-shells.png" alt="drawing" width="400"/>
 
 The bottom has the lowest energy. Since there exists relatively large gap between the shells with the number box, we often group them together and call it **shell model space** or **shell model orbit**
+
 | model space | components |
 | -----------  | - |
 | s  | $0s_{1/2}$ |
@@ -57,6 +65,7 @@ If the nucleons are full in these spaces, then one extra nucleon needs high ener
 
 In most of the experiments, nucleus is initially in ground state $J_i$. After the scattering, the nucleus may be excited to a certain excited state $J_f$. In which we are interested in the excitation energy $\Delta E$ and the probability of the transition (density matrix to be more precise). See the next section for how to use BIGSTICK to compute excitation energy and density matrix.
 
+### Nuclear operator and transition
 
 Occasionally we are looking for the expectation value of an operator $\hat{O}$, say spin $\hat{\sigma}$ or Gamow-Teller $\hat{\sigma} \hat{\tau}$. That is, we want to calculate
 
@@ -94,7 +103,7 @@ $ ls -l | grep bigstick
 ## Input files
 The input files are specific to the nucleus. They also determines how long and how heavy the calculation will be. The lines starting with $!$ are treated as comments and will be ignored in calculation.
 
-### particle space (.sps)
+### Particle space (.sps)
 Particle space file define the Hilbert space for the nucleus, ending in .sps. Each row represents one orbit and has 4 numbers, $n$, $l$, $j$ and weight, separated in space. Weights are any non-negative number used to do a more sophisticated job.
 
 ```
@@ -166,7 +175,7 @@ pn
 10 1 5 11
 ```
 
-### interaction (*.int)
+### Interaction (*.int)
 The interaction file (*.int) defines the Hamiltonian of the potential. It does not look as simple as particle space orbit. Often time we simply take open source interaction files from the existing literature, or use other numerical software to generate. For example, `usdb.int` is the interaction for the orbits $0d_{3/2}$, $0d_{5/2}$, $1s_{1/2}$. First line contains the number of nonzero elements and the energy of the described orbits. The rest of the file are two body matrix element $V_{JT}(ab,cd)= \langle ab; JT | V | cd; JT \rangle$, V is the nuclear potential $a,b,c,d$ are the label of nucleus, J/T is the spin/isospin
 
 
@@ -186,7 +195,7 @@ The interaction file (*.int) defines the Hamiltonian of the potential. It does n
 ```
 The orbit order must match with the particle space file.
 
-### strength operator (*.opme)
+### Strength operator (*.opme)
 Suppose we want to calculate $\langle J_f | \hat{O} | J_i \rangle$. We will need a file for matrix elements just like the interaction file. For example, below is the spin operator elements for psd orbit.
 
 ```
@@ -212,7 +221,7 @@ iso
 The orbit label always starts from 1.
 
 
-### input script (*.in)
+### Input script (*.in)
 
 There are two ways to use BIGSTICK.
 - Interactive mode:
@@ -303,13 +312,16 @@ $ your_bigstick.x < create_strength.in
 ```
 Note that it's necessary to follow this order.
 
-**I wrote a python script to generate BIGSTICK input script, see https://github.com/noctildon/pyBigstick**
+**I wrote a python script to generate BIGSTICK input script, see [this post]({{ base_path }}/posts/2024/pybigstick/)**
+
 
 ## Output files
-- *.wfn: BIGSTICK internal wavefunction binary. Not human readable
-- *.res: energy, spin, isospin spectrum results
 
-This is a general result (f19.res)
+### *.wfn
+BIGSTICK internal wavefunction binary, not human readable. It can be input to BIGSTICK to do further calculations.
+
+### *.res
+`f19.res` energy, spin, isospin spectrum
 ```
   BIGSTICK Version 7.10.4Nov  2021
   single-particle file = sd
@@ -324,8 +336,12 @@ This is a general result (f19.res)
     6    -18.99335   4.86761     3.500   0.500
 ...
 ```
+State is the state number, 1 is ground state, 2 is first excited state, and so on.
+E is absolute state energy, Ex is excitation energy, both in MeV
+J is spin, T is isospin.
 
-This is the operator value (f19_s.res)
+
+`f19_s.res` expectation value of the operator given in .opme file
 ```
   BIGSTICK Version 7.10.4Nov  2021
            1           2
@@ -344,8 +360,11 @@ This is the operator value (f19_s.res)
   -18.891616    0.000000
 ...
 ```
+Energy is absolute state energy (same as f19.res), strength is the sqaured of expectation value $| \langle J_f | \hat{O} | J_i \rangle |^2$ in whatever unit defined in .opme file.
 
-- *.dres: densities results (f19.dres)
+
+### *.dres
+`f19.dres` reduced one-body densities matrix $\rho^{fi}_K(a^\dagger b) = [K]^{-1} \langle J_f || (a^\dagger b)_K || J_i \rangle$
 ```
 ...
  Initial state #    1 E =  -23.86096 2xJ, 2xT =    1   1
@@ -364,12 +383,46 @@ This is the operator value (f19_s.res)
     3    3   0.42662  -0.39164
 ...
 ```
+For example,
+```
+1    3  -0.01476  -0.01563
+```
+1 is the label of the first orbit, 3 is the 3rd, defined in .sps file.
 
-## Conclusion
-Now you are ready to compute almost every kind of nucleus. But to get more practical and meaningful outcomes, there is still some work to do.
+The one-body matrix elements are
+
+$$
+-0.01476 = \langle \Phi_2 || [a_1^\dagger a_3]_{J=1,T=0} || \Phi_1 \rangle \\
+-0.01563 = \langle \Phi_2 || [a_1^\dagger a_3]_{J=1,T=1} || \Phi_1 \rangle
+$$
+
+## Hands-on example
+Download the [folder]({{ base_path }}/research/bigstick_examples/F19/) and run
+```bash
+$ cd F19/
+$ YOURS/BigstickPublick/src/bigstick.x < create_wfn.in
+```
+Then `f19.res` and `f19.dres` should be generated. Other nuclei examples are included in [folder]({{ base_path }}/research/bigstick_examples/)
+
+
+## Conclusion and afterword
+Now you are ready to compute almost every kind of nucleus. All you need is to find the suitable interaction file (.int).
+
+Depending on the nucleus, it could be extremely heavy to calculate, especially for heavy nuclei. The following is the computational cost for what I've calculated,
+
+| nucleus | Time | RAM | CPU |
+| ------- | -    | -   | -   |
+| Ar40    | a few minutes  | a few GB  | 1   |
+| Cs133   | 4hr    | 3TB   | 384   |
+| I127    | 5.5hr    | 13TB   | 1680   |
+
+To get more practical and meaningful outcomes after BIGSTICK, there is still some work to do. See [7operator]({{ base_path }}/research/7operator) for how to turn BIGSTICK output to response functions and cross sections.
+
+Obviously BIGSTICK is capable of doing more than this post. Refer to the manual for details.
 
 
 ## Reference and further reading
+- [7operator]({{ base_path }}/research/7operator)
 - [BIGSTICK github repo](https://github.com/cwjsdsu/BigstickPublick)
 - [BIGSTICK manual](https://arxiv.org/abs/1801.08432)
 - [U of Manchester](https://oer.physics.manchester.ac.uk/NP/Notes/Notes/Notesse23.xht)

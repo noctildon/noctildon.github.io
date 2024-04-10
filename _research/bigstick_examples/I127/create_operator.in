@@ -1,0 +1,5 @@
+o               ! Apply a one-body operator to a previous wfn
+I127            ! previous wfn
+I127_o          ! output name
+1600
+jj55_GT0_pn      ! opme file

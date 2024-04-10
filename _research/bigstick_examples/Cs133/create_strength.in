@@ -1,0 +1,11 @@
+s                  ! Compute strength function distribution
+cs133_o            ! previous wfn
+cs133_s            ! output name
+1600
+upn
+jj55pna            ! interaction file
+1 102. 133. 0.3    ! scaling
+1 1 1 1 1
+end
+300 300            ! number of states, iterations
+2                  ! pivot state as ground state

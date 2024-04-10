@@ -1,0 +1,11 @@
+s                  ! Compute strength function distribution
+I127_o             ! previous wfn
+I127_s             ! output name
+670
+upn
+jj55pna            ! interaction file
+1 102. 127. 0.3    ! scaling
+1 1 1 1 1
+end
+100 100            ! number of states, iterations
+1
