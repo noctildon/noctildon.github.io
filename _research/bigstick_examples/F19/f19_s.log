@@ -1,0 +1,64 @@
+  = = = = = = BIGSTICK run log file = = = = = = 
+  Code and run information 
+  BIGSTICK Version 7.10.4Nov  2021
+  Run date: 2022-08-29
+  Menu choice: s  
+
+ Running on NERSC_HOST: none
+ scratch_dir (*.wfn,...): .
+ Number of MPI processors =           1 , with # OpenMP threads =            1
+  
+  Information on defaults/flags (found in module flagger in file bmodules_flags.f90):
+  Limits on storage (found in module flagger in file bmodules_flags.f90):
+  maxjumpmemory_default =    64.0000000      Gb 
+  maxlanczosstorage1 =    16.0000000      Gb 
+  flag iffulluseph (if full, use particle-hole transformation ) =  T
+  
+  
+  Many-body system information 
+  Single particle space read in from file f19_o.wfn                                         
+  Isospin formalism for single-particle space
+  Proton-neutron formalism is not yet fully implemented...is it?
+ Valence Z =            1 , valence N =            2
+  M =            1 /2, parity = +
+  
+ there are            6  sectors            1
+ there are            6  sectors            2
+  Total basis dimension:                   128
+  # Slater determinants: proton                    12 , neutron                    58
+  # sectors: protons            6 , neutrons            6
+                  337  neutron 2b jumps
+   2 max # 2-body jumps in a sector jump             105 =>     0.000 Gb storage
+                   86  proton 1-b jumps
+   1 max # 1-body jumps in a sector jump               9 =>     0.000 Gb storage
+                  704  neutron 1-b jumps
+   2 max # 1-body jumps in a sector jump              72 =>     0.000 Gb storage
+  Time to compute jumps :    0.0000000000000000     
+  avg storage per operation available    8808147.5364712365       bytes
+  avg storage per weighted operation avail:    353374.33342826198       bytes/ns
+ opfragstat(           1 ,            1 )%nnodes =            1
+  frags            1 ->           1  on procs            0           0
+ RAM for 2 lanczos vectors in storage         :        0.001 Mb 
+ RAM for jumps in storage    (total)          :           0.025 Mb 
+ RAM for uncoupled two-body matrix elements   :        0.012 Mb 
+  total # operations                  7266  ~ ops/jump =    6.44720507    
+  Effective storage per operation =    3.4427470410129368       bytes 
+ Total nonzero matrix (including indices, assuming hermitian) would require   0.2906E-04 Gb storage 
+  
+  Interactions read in: 
+  opening OXBASH/NuSHELL-style isospin formatted file usdb.int
+ ! depmas=  0.30 lincom=  56 icntrl= 1 fgserr=  1.00                   
+ ! 1=d3/2 2=d5/2 3=s1/2                                                
+ ! the first line has the three single-particle energies               
+ ! the - sign tells oxbash that the tbme have a mass dependence of the 
+ ! [18/(16+n)]^0.3 where n is the number of valence particles          
+  Scaling: spe    1.00000000      TBMEs by (   18.0000000     /   19.0000000     )^  0.300000012      =   0.983910680    
+          63  two-body matrix elements in this file 
+  As a check, first two-body matrix element in list is   -1.37960005    
+  No one-body potential beyond single-particle energies 
+  Time to compute jumps :    0.0000000000000000     
+  Testing for loss of orthogonality on iteration          126
+  loss of orthogonality    -8.1930909936261820        4.5126406272238935E-003  0.18839405745394591     
+
+         127  iterations 
+  Average time per processor is    2.8000000864267349E-002  max    2.8000000864267349E-002

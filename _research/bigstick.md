@@ -4,7 +4,7 @@ layout: single-portfolio
 excerpt: "<img src='/images/research/nuclear-shells.png'>"
 collection: research
 order_number: 40
-date: 2024-04-10
+date: 2024-04-15
 ---
 <h6>Last update: {{ page.date | date: "%B %d, %Y" }}</h6>
 
@@ -401,8 +401,17 @@ Download the [folder]({{ base_path }}/research/bigstick_examples/F19/) and run
 ```bash
 $ cd F19/
 $ YOURS/BigstickPublick/src/bigstick.x < create_wfn.in
+$ YOURS/BigstickPublick/src/bigstick.x < create_operator.in
+$ YOURS/BigstickPublick/src/bigstick.x < create_strength.in
 ```
-Then `f19.res` and `f19.dres` should be generated. Other nuclei examples are included in [folder]({{ base_path }}/research/bigstick_examples/)
+Then
+- `f19.res` (energy state spectrum)
+- `f19.dres` (density matrix)
+- `f19_s.res` (strength for Gamow-Teller)
+
+will be generated.
+
+Other nuclei examples are included in [folder]({{ base_path }}/research/bigstick_examples/)
 
 
 ## Conclusion and afterword

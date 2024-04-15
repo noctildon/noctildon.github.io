@@ -1,0 +1,11 @@
+d                    ! create densities
+c12                  ! output file name
+psd                   ! orbit information
+4 4                  ! # of valence protons, neutrons
+0                    ! 2 * jz
+0                    ! both parity
+YSOX                 ! interaction file name (*.int)
+1 6 12 0.3           ! scaling
+end                  ! end of reading in Hamiltonian files
+ld                   ! diagonalization algorithm
+300 450                ! number of state, max Lanczos iteration

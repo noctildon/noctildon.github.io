@@ -1,0 +1,88 @@
+  = = = = = = BIGSTICK run log file = = = = = = 
+  Code and run information 
+  BIGSTICK Version 7.10.4Nov  2021
+  Run date: 2023-07-21
+  Menu choice: s  
+
+ Running on NERSC_HOST: none
+ scratch_dir (*.wfn,...): .
+ Number of MPI processors =           1 , with # OpenMP threads =            1
+  
+  Information on defaults/flags (found in module flagger in file bmodules_flags.f90):
+  Limits on storage (found in module flagger in file bmodules_flags.f90):
+  maxjumpmemory_default =    64.0000000      Gb 
+  maxlanczosstorage1 =    16.0000000      Gb 
+  flag iffulluseph (if full, use particle-hole transformation ) =  T
+  
+  
+  Many-body system information 
+  Single particle space read in from file c12_o.wfn                                         
+  Isospin formalism for single-particle space
+  Proton-neutron formalism is not yet fully implemented...is it?
+ Valence Z =            4 , valence N =            4
+  M =            0 , parity = +
+  
+ there are           15  sectors            1
+ there are           15  sectors            2
+  Total basis dimension:               1133654
+  # Slater determinants: proton                  3060 , neutron                  3060
+  # sectors: protons           15 , neutrons           15
+               187347  proton 2b jumps
+   1 max # 2-body jumps in a sector jump           36393 =>     0.001 Gb storage
+               187347  neutron 2b jumps
+   2 max # 2-body jumps in a sector jump           36393 =>     0.001 Gb storage
+               112480  proton 1-b jumps
+   1 max # 1-body jumps in a sector jump            7384 =>     0.000 Gb storage
+               112480  neutron 1-b jumps
+   2 max # 1-body jumps in a sector jump            7384 =>     0.000 Gb storage
+  Time to compute jumps :    2.3000000044703484E-002
+  avg storage per operation available    65.311203394027302       bytes
+  avg storage per weighted operation avail:    18.206860655495262       bytes/ns
+ opfragstat(           1 ,            1 )%nnodes =            1
+  frags            1 ->           1  on procs            0           0
+ RAM for 2 lanczos vectors in storage         :        9.069 Mb 
+ RAM for jumps in storage    (total)          :          14.092 Mb 
+ RAM for uncoupled two-body matrix elements   :        0.081 Mb 
+  total # operations             979923760  ~ ops/jump =    1634.14868    
+  Effective storage per operation =    1.4380210558421402E-002  bytes 
+ Total nonzero matrix (including indices, assuming hermitian) would require    3.920     Gb storage 
+  
+  Interactions read in: 
+  opening OXBASH/NuSHELL-style isospin formatted file YSOX.int
+ !SFO-0.55VMU(pp-sdsd)0.85VMU(psd-psd)-SPDF-M ORDER spe IS:            
+ !1=1P1/2, 2=1P3/2, 3=1D3/2, 4=1D5/2, 5=2S1/2                          
+  Scaling: spe    1.00000000      TBMEs by (   6.00000000     /   12.0000000     )^  0.300000012      =   0.812252402    
+         198  two-body matrix elements in this file 
+  As a check, first two-body matrix element in list is  -0.241799995    
+  No one-body potential beyond single-particle energies 
+  Time to compute jumps :    3.3999999985098839E-002
+
+         300  iterations 
+  Average time per processor is    1057.5490000010468       max    1057.5490000010468     
+  
+  Note: output wfns are normalized;  
+   (To change this, use menu option (su))
+  
+  Total time to run :    2167.8629999998957     
+  Time to compute basis :    9.9999993108212948E-004
+  Time to count up jumps :    2.0999999949708581E-002
+  Time to create descendents :    0.0000000000000000     
+  Time to setup for matrix elements :    0.0000000000000000     
+  Time to decouple matrix elements :    5.0000001210719347E-003
+  Time to compute jumps :    3.3999999985098839E-002
+  Time to sort 1b-jumps :    3.4999999916180968E-002
+  Time to set up pivot :    0.0000000000000000     
+  Time to compute lanczos :    1249.4920000000857     
+  Time total in H mat-vec multiply  :    1057.5500000012107     
+  Time to apply sp energies :    0.0000000000000000     
+  Time in pn :    565.50199999916367     
+  Time in pn(back) :    322.07800000160933     
+  Time in 2-body (pp) :    30.512000001035631     
+  Time in 2-body (nn) :    109.01200000010431     
+  Time in reorthogonalization :    191.72199999820441     
+  Time in reduce (in applyh only) :    0.0000000000000000     
+  Time spent diagonalizing. :    3.7000000011175871E-002
+  Time to build eigenvectors. :    139.77700000000186     
+  Time to compute J^2, T^2 :    2.6159999999217689     
+  
+  *** END OF LOG *** END OF LOG *** END OF LOG *** 

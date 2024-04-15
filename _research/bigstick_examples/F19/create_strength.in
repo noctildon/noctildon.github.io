@@ -1,0 +1,8 @@
+s                ! Compute strength function distribution using previous wfn
+f19_o            ! previous run wfn
+f19_s            ! output name
+usdb             ! interaction file
+1 18. 19. 0.3    ! scale
+end
+200 200           ! # of state, lanczos iterations
+1                ! pivot vector

@@ -1,0 +1,4 @@
+o                ! Apply a one-body (transition) operator
+f19              ! previous run wfn
+f19_o            ! output name
+sdgt0            ! .opme file

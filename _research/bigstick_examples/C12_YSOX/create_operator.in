@@ -1,0 +1,4 @@
+o             ! Apply a one-body operator to a previous wfn
+c12           ! previous wfn
+c12_o         ! output name
+psd_GT0       ! opme file
