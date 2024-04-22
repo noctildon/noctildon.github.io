@@ -4,7 +4,7 @@ layout: single-portfolio
 excerpt: "<img src='/images/research/nuclear-shells.png'>"
 collection: research
 order_number: 40
-date: 2024-04-15
+date: 2024-04-22
 ---
 <h6>Last update: {{ page.date | date: "%B %d, %Y" }}</h6>
 
@@ -432,6 +432,7 @@ Obviously BIGSTICK is capable of doing more than this post. Refer to the manual 
 
 ## Reference and further reading
 - [7operator]({{ base_path }}/research/7operator)
+- [My publication: inelastic nuclear scattering from neutrinos and dark matter](https://inspirehep.net/literature/2097598)
 - [BIGSTICK github repo](https://github.com/cwjsdsu/BigstickPublick)
 - [BIGSTICK manual](https://arxiv.org/abs/1801.08432)
 - [U of Manchester](https://oer.physics.manchester.ac.uk/NP/Notes/Notes/Notesse23.xht)

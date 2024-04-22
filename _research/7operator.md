@@ -4,7 +4,7 @@ layout: single-portfolio
 excerpt: "<img src='/images/research/nuclear_response.png'>"
 collection: research
 order_number: 40
-date: 2024-04-15
+date: 2024-04-22
 ---
 <h6>Last update: {{ page.date | date: "%B %d, %Y" }}</h6>
 
@@ -36,6 +36,7 @@ I recommend to start with the neutrino, because it's closer to the Standard Mode
 ## Reference and further reading
 - [Cover image source](https://www.researchgate.net/figure/Electroweak-nuclear-response-as-a-function-of-the-energy-transfer-The-dominant-channels_fig1_325873651)
 - [7operator script](https://arxiv.org/pdf/0706.2210.pdf)
+- [My publication: inelastic nuclear scattering from neutrinos and dark matter](https://inspirehep.net/literature/2097598)
 - [Theoretical Nuclear and Subnuclear Physics](https://www.amazon.com/THEORETICAL-NUCLEAR-SUBNUCLEAR-PHYSICS-SECOND/dp/9812387951): chapter 45 and 46 specifically
 - [Semileptonic weak interactions with C12](https://inspirehep.net/literature/83069)
 - [nuclear physics of dark matter detection](https://www.worldscientific.com/doi/abs/10.1142/S0218301392000023)
