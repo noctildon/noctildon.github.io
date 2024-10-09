@@ -1,25 +1,50 @@
-name: Python CI
+# name: python_app
 
-# Define the event that will trigger this action (e.g., on every push)
+# # Define the event that will trigger this action (e.g., on every push)
+# on: [push]
+
+# # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# jobs:
+#   # This workflow contains a single job called "build"
+#   build:
+#     # The type of runner that the job will run on
+#     runs-on: ubuntu-latest
+
+#     # Steps represent a sequence of tasks that will be executed as part of the job
+#     steps:
+#       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+#       - name: Checkout repository
+#       - uses: actions/checkout@v4
+
+#       - name: Set up Python 3.10
+#         uses: actions/setup-python@v5
+#         with:
+#           python-version: '3.10'
+
+#       - name: Run Python script
+#         run: python cicd.py
+
+
+name: python_app
+
 on: [push]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
+
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout repository
       - uses: actions/checkout@v4
-
-      - name: Set up Python 3.10
+      - name: Set up Python
+        # This is the version of the action for setting up Python, not the Python version.
         uses: actions/setup-python@v5
         with:
+          # Semantic version range syntax or exact version of a Python version
           python-version: '3.10'
+          # Optional - x64 or x86 architecture, defaults to x64
+          architecture: 'x64'
 
-      - name: Run Python script
-        run: python cicd.py
+      # You can test your matrix by printing the current Python version
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)"
