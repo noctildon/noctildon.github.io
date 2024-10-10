@@ -1,6 +1,8 @@
+import time
+
 def write():
     with open('output.txt', 'w') as f:
-        f.write('Hello from GitHub Actions!!')
+        f.write(f'Hello from GitHub Actions!! @ {time.ctime()}')
 
 if __name__ == "__main__":
     write()
