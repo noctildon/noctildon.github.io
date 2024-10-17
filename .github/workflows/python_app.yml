@@ -10,6 +10,9 @@ on:
 
 jobs:
   build:
+    env:
+      DISABLE_CI: true # set to false to enable github actions CI/CD
+    if: ${{ env.DISABLE_CI != 'true' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
