@@ -6,3 +6,6 @@ __pycache__/
 resume/transcript.pdf
 resume/coverletter.docx
 resume/coverletter.pdf
+*.aux
+*.log
+*.out
